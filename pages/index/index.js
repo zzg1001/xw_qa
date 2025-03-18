@@ -52,7 +52,7 @@ Page({
     const token = wx.getStorageSync('token')
     const joinGroup = wx.getStorageSync('joinGroup')
      if (!joinGroup) {
-      this.setData({ tipText: '报名参加', nowSelect: index })
+      this.setData({ tipText: '请报名参加', nowSelect: index })
     } else {
       wx.navigateTo({
         url: url
