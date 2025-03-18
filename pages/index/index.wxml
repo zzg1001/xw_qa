@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="tip-btn" wx:for="{{buttons}}" wx:key="index" bindtap="navigateToPage" data-index="{{index}}">
+    <view wx:if="{{index === nowSelect}}">
+      <text class="tip">{{tipText}}</text>
+    </view>
+    <view class="button">
+      <image class="icon" src="{{item.icon}}" />
+      <text class="text">{{item.text}}</text>
+      <text class="arrow">></text>
+    </view>
+  </view>
+  <view wx:if="{{!loginSate}}">
+    <view class="login-bg">
+      <view class="login-card">
+        <view class="title">请求授权</view>
+        <!-- <view class="summary">我们需要获取您的微信基本信息进行注册后, 您才能进行下一步操作.</view> -->
+        <view wx:if="{{nickName !== null}}">
+          <view class="userInfo">
+            <span>用户名: </span>
+            <span style="margin-left: 30px;">{{nickName}}</span>
+          </view>
+        </view>
+        <view wx:else>
+          <input type="nickname"   value="{{nickName}}"   class="custom-btn mybtn" bindinput="getName" placeholder="授权用户名" />
+        </view>
+        <view wx:if="{{avatarUrl !== null}}">
+          <view class="userInfo">
+            <span style="margin-right: 16px;">用户头像:</span>
+            <image src="{{avatarUrl}}" style="width: 45px; height: 45px; border-radius: 5px;" />
+          </view>
+        </view>
+        <view wx:else>
+          <button open-type="chooseAvatar" bindchooseavatar="getAvatar">授权头像</button>
+        </view>
+        <button class="login-btn" bindtap="onLogin">授权登录</button>
+      </view>
+    </view>
+  </view>
+</view>

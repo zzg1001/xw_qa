@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/answer/answer",
+    "pages/resultPage/resultPage",
+    "pages/rankingPage/rankingPage",
+    "pages/myQuestions/myQuestions",
+    "pages/exchange/exchange",
+    "pages/taskList/taskList",
+    "pages/signupPage/signupPage"
+  ]
+ 
+}

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header">
+    <image class="header-image" src="/static/images/1.png" />
+    <text class="title">组队报名</text>
+  </view>
+  <view class="content">
+    <text class="rules-title">组队规则</text>
+    <text class="rules-text">
+      1. 每次的组队将于周五开始报名，周日完成并结算分数。
+      2. 组队报名人数超过3人即可开始团战，在进入组队页面后刷新即可看到实时报名人数。
+      3. 一旦开始，须要在规定期限内完成。
+    </text>
+  </view>
+  <view class="button-col">
+     <view  class="button-group" >
+        <picker bindchange="bindPickerChange"  value="{{index}}" range="{{array}}">
+          <button>选择组队: <span style="color:blue;font-weight: bold;">{{array[index]}}</span></button>
+        </picker>
+    </view>
+    <view  class="button-row">
+      <view  class="info" style="font-size: 16px;margin-bottom: 16px;">团队: {{groupName}} 人数:{{groupUserCount}}</view>
+      <button class="refresh-btn"  type="primary" bindtap="reFreshPage">刷新</button>
+    </view>
+  </view>
+
+</view>

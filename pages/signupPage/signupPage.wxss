@@ -1,0 +1,97 @@
+.container {
+  background-color: #7ec8e3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+  width: 90%;
+  max-width: 600rpx;
+  padding-left: 20rpx;
+}
+
+.header-image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 10rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600rpx;
+  height: 500px; /* 自动高度 */
+  margin-bottom: 20rpx;
+}
+
+.rules-title {
+  font-size: 30rpx;
+  color: #007aff; /* 蓝色 */
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.rules-text {
+  font-size: 25rpx;
+  color: #5dade2; /* 淡蓝色 */
+}
+
+.button-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600rpx;
+  margin-top: 10rpx;
+}
+
+/* 设置父容器为 flex 布局 */
+.button-row {
+  display: flex;
+  flex-direction: row; /* 横向排列 */
+  align-items: center; /* 垂直居中 */
+  justify-content: flex-start; /* 从左侧开始排列 */
+  width: 100%; /* 父容器宽度 */
+  margin-top: 20px; /* 与上一个元素保持 20px 的距离 */
+}
+
+/* 设置信息区域的样式 */
+.info {
+  font-size: 14px; /* 字体更小 */
+  margin-right: auto; /* 推动按钮到右侧 */
+  text-align: center; /* 文本居中对齐 */
+  width: 60%; /* 占据父容器宽度的 60% */
+}
+
+/* 设置按钮的样式 */
+.refresh-btn {
+  width: 30%; /* 占据父容器宽度的 30% */
+  margin-left: auto; /* 推动按钮到右侧 */
+}
+
+
+.register-status-button, .refresh-button {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 15rpx 20rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  font-size: 20rpx;
+  color: #000;
+  flex: 1;
+  margin: 5rpx;
+}

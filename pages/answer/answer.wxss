@@ -1,0 +1,72 @@
+.container {
+  background-color: #7ec8e3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+  width: 90%; /* 与下面的元素对齐 */
+  max-width: 600rpx;
+  padding-left: 20rpx;
+}
+
+.header-image {
+  width: 183rpx;
+  height: 170rpx;
+  margin-right: 10rpx;
+}
+
+.title {
+  font-size: 32rpx; /* 增大字体 */
+  color: #fff;
+}
+
+.question-list {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 55rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600rpx;
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 30rpx;
+}
+
+.question {
+  margin-bottom: 20rpx;
+}
+
+.question-text {
+  font-size: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.options {
+  margin-left: 20rpx;
+}
+
+.option {
+  font-size: 18rpx;
+  margin-bottom: 5rpx;
+}
+
+.submit-button {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 20rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  font-size: 20rpx;
+  color: #000;
+  width: 90%;
+  max-width: 600rpx;
+  margin-top: 5rpx;
+}

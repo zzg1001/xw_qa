@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">
+    <image class="header-image" src="/static/images/1.png" />
+    <text class="title">每周问答</text>
+  </view>
+  <view class="question-list">
+    <view class="question" wx:for="{{questions}}" wx:key="index">
+      <text class="question-text">{{item.index}}.{{item.question}}</text>
+      <radio-group bindchange="radioChange">
+        <view class="options" wx:for="{{item.options}}" wx:key="index" wx:for-item="answer">
+          <label class="option">
+            <radio class="radio" value="{{item.index}},{{item.id}},{{index}}" />{{answer}}
+          </label>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+  <button class="submit-button" bindtap="submitAnswers">提交回答</button>
+</view>
