@@ -27,8 +27,7 @@ App({
         callback(res);
       },
       fail: function (err) {
-        console.log(err)
-        errFun(err);
+
       }
     })
   },
