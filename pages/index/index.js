@@ -5,7 +5,7 @@ Page({
       { icon: '/static/images/1.png', text: '每周问答' },
       { icon: '/static/images/2.png', text: '排行榜' },
       { icon: '/static/images/3.png', text: '我的积分' },
-      { icon: '/static/images/4.png', text: '报名参加\n截至日期：2024年10月01日' }
+      { icon: '/static/images/4.png', text: '报名参加\n截至日期：2025年10月01日' }
     ],
     tipText: '',
     nowSelect: null,
@@ -49,7 +49,6 @@ Page({
     }
   },
   chechAuth(url, index) {
-    const token = wx.getStorageSync('token')
     const joinGroup = wx.getStorageSync('joinGroup')
      if (!joinGroup) {
       this.setData({ tipText: '请报名参加', nowSelect: index })
@@ -68,16 +67,21 @@ Page({
         url: '/pages/index/index' // 刷新首页
       });
     }
-
     switch (index) {
       case 0:
+        const joinGroup = wx.getStorageSync('joinGroup')
+     if (!joinGroup) {
+      this.setData({ tipText: '请报名参加', nowSelect: index })
+      setTimeout(() => { this.setData({ tipText: '', nowSelect: null }) }, 1000)
+      return;
+       }
         app.wxRequest("GET", "/qa/homeStatus", null, res => {
           const { code, content } = res.data
           switch (code) {
             case 200:
               if (content.code !== 0) {
                 this.setData({ tipText: content.message, nowSelect: index })
-                setTimeout(() => { this.setData({ tipText: '', nowSelect: null }) }, 2000)
+                setTimeout(() => { this.setData({ tipText: '', nowSelect: null }) }, 1000)
               } else { 
                 this.chechAuth('/pages/answer/answer', index) }
               break;

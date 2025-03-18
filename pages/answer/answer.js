@@ -65,11 +65,10 @@ Page({
             break;
         }
       }, (err) => {
-        console.log(err.errMsg)
       })
     } else {
       wx.showToast({
-        title: "您还未完成答题, 请全部答完再提交~",
+        title: "请全部答完再提交",
         icon: 'none',
         duration: 2000
       })
